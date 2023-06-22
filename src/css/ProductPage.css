@@ -18,7 +18,8 @@ body {
 }
 
 #contents {
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 #header {
     border: 5px solid black;
@@ -90,4 +91,35 @@ body {
 .number-list li {
     margin: 0 10px;
     display: inline-block;
+}
+
+#footer {
+    margin-top: 40px;
+}
+.company-information {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+.contact-information-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.1rem solid #000;
+}
+
+.contact-information-container p {
+    line-height: 44px;
+    color: #000;
+    font-size: 16px;
+}
+.contact-information-container ul {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-information-container ul li {
+    line-height: 44px;
+    color: #000;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
