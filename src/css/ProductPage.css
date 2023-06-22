@@ -48,3 +48,26 @@ body {
     margin-right: 25px;
     margin-left: 10px;
 }
+.thumbnail {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+.product {
+    display: grid;
+    grid-template-rows: 8fr 1.6fr;
+    box-sizing: border-box;
+}
+.thumbnail-image {
+    position: relative;
+    border: 0.1rem solid #000;
+}
+.thumbnail-image img {
+    width: 100%;
+}
+.thumbnail-information {
+    padding: 10px 10px 0;
+    position: relative;
+    border: 0.1rem solid #000;
+}
