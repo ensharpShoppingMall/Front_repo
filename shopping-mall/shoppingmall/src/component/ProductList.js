@@ -1,4 +1,4 @@
-import '../css/WomenProductPage.css';
+import '../css/ProductListPage.css';
 
 const ProductList = () => {
     return (
