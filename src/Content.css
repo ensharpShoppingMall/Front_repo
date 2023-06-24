@@ -1,0 +1,4 @@
+.header {
+  transition: ease 0.5s;
+  border-bottom: 0.1rem solid #000;
+}

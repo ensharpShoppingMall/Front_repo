@@ -1,0 +1,25 @@
+.loginBox {
+  width: 30%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.form-floating {
+  width: 100%;
+}
+
+.signInOrUp {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkInfo {
+  margin-top: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+
+#floatingInput {
+  margin-top: 15em;
+}
