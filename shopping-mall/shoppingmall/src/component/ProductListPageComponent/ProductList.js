@@ -1,10 +1,17 @@
 import '../../css/ProductListPage.css';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const ProductList = () => {
+    const navigate = useNavigate();
+
+    function navigateToProduct() {
+        navigate('/product');
+    }
+
     return (
         <div>
             <ul className="thumbnail">
-                <li className="product">
+                <li className="product" onClick={navigateToProduct}>
                     <div className="thumbnail-image">
                         <img src="https://amomento.co/web/product/medium/202306/589cd5b468afad06a453b15c83262ab4.jpg" />
                     </div>
