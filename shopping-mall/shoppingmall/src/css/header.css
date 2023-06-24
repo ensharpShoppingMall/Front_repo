@@ -1,0 +1,14 @@
+#category {
+    width: 100%;
+    .nav-item {
+        flex: 1;
+    }
+}
+
+#category button {
+    color: black;
+}
+
+.header a {
+    cursor: pointer;
+}
