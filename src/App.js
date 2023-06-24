@@ -9,7 +9,7 @@ import FindId from "./pages/findId.js";
 import FindPw from "./pages/findPw.js";
 import SignUp from "./pages/signUp.js";
 import ProductListPage from "./pages/productListPage";
-import Product from "./pages/product";
+import ProductInfo from "./pages/productInfo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/find_pw" element={<FindPw />} />
           <Route path="/join" element={<SignUp />} />
           <Route path="/women" element={<ProductListPage />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<ProductInfo />} />
         </Routes>
       </BrowserRouter>
     </div>
