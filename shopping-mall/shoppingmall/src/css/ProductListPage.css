@@ -79,7 +79,7 @@ body {
     justify-content: center;
 }
 .page-changer {
-    margin: 0 10px;
+    margin: 0px;
     display: inline-block;
 }
 .number-list {
@@ -87,6 +87,7 @@ body {
 }
 .number-list li {
     margin: 0 10px;
+    align-content: center;
     display: inline-block;
 }
 
