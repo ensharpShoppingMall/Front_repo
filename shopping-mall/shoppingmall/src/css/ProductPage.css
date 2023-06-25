@@ -22,7 +22,10 @@ body {
 }
 .product-information {
     display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
     border: 1px solid #111;
+    border-bottom: none;
     width: 40vw;
     font-size: 20px;
     line-height: 24px;
@@ -36,6 +39,41 @@ body {
 }
 .product-detail strong {
     font-size: 20px;
+}
+
+.product-name-price {
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px solid #111;
+}
+.product-price {
+    margin-bottom: 50px;
+}
+.color-option {
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #111;
+}
+.size-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #111;
+}
+.add-cart {
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #111;
+    text-align: center;
+}
+.add-to-cart-button {
+    background-color: transparent;
+}
+.naver-pay {
+    padding: 10px 10px 10px 10px;
+    border-bottom: 1px solid #111;
+    text-align: center;
+}
+.naver-pay-button {
+    color: rgb(0, 189, 57);
+    background-color: transparent;
 }
 
 .product-image {

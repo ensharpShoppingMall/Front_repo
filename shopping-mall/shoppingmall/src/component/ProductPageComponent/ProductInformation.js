@@ -37,11 +37,25 @@ const ProductInformation = () => {
                         <br /> *실제 컬러는 상세 이미지와 가장 유사합니다.
                         <br />
                     </div>
-                    <div className="product-name-price"></div>
-                    <div className="color-option"></div>
-                    <div className="size-option"></div>
-                    <div className="add-cart"></div>
-                    <div className="naver-pay"></div>
+                    <div className="product-name-price">
+                        <h5 className="product-name">OV SUNGLASSES (BLACK)</h5>
+                        <div className="product-price">289,000</div>
+                    </div>
+                    <div className="color-option">
+                        <label>Color</label>
+                    </div>
+                    <div className="size-option">
+                        <label className="size-label">Size</label>
+                        <button className="size-button">BLACK</button>
+                    </div>
+                    <div className="add-cart">
+                        <button className="add-to-cart-button">
+                            ADD TO CART
+                        </button>
+                    </div>
+                    <div className="naver-pay">
+                        <button className="naver-pay-button">NAVER PAY</button>
+                    </div>
                     <div className="size-guide"></div>
                     <div className="fabric-care"></div>
                     <div className="shipping-return"></div>
