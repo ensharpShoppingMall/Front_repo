@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -16,7 +15,7 @@ import FindId from "./pages/findId.js";
 import FindPw from "./pages/findPw.js";
 import SignUp from "./pages/signUp.js";
 import ProductListPage from "./pages/productListPage";
-import ProductInfo from "./pages/productInfo";
+import Product from "./pages/productInfo";
 import Cart from "./pages/cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -32,7 +31,7 @@ function App() {
             <Route path="/find_pw" element={<FindPw />} />
             <Route path="/join" element={<SignUp />} />
             <Route path="/women" element={<ProductListPage />} />
-            <Route path="/product" element={<ProductInfo />} />
+            <Route path="/product" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>

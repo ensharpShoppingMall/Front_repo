@@ -20,18 +20,16 @@ function DrawSignUpBox() {
 
   async function postSignUpData() {
     try {
-      const response = await axios.post(
-        "http://3.39.11.11:8080/member/api/join",
-        {
-          member_id: id,
-          password: password,
-          name: name,
-          zipcode: zipCode,
-          address: address,
-          phonenumber: phoneNumber,
-          email: email,
-        }
-      );
+      console.log(2);
+      const response = await axios.post("/member/api/join", {
+        member_id: id.toString(),
+        password: password.toString(),
+        name: name.toString(),
+        zipcode: zipCode,
+        address: address.toString(),
+        phonenumber: phoneNumber.toString(),
+        email: email.toString(),
+      });
       console.log(response);
     } catch (error) {
       console.error(error);
@@ -176,15 +174,10 @@ function DrawSignUpBox() {
           </div>
         </div>
         <div className="col-12">
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={postSignUpData}
-          >
-            SIGN UP
-          </button>
+          <button className="btn btn-primary">SIGN UP</button>
         </div>
       </form>
+      <button onClick={postSignUpData}>signUp</button>
     </div>
   );
 }
