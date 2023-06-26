@@ -12,8 +12,16 @@ function DrawHeader() {
 
   const navigate = useNavigate();
 
+  function navigateToHome() {
+    navigate("/");
+  }
+
   function navigateToLogin() {
     navigate("/login");
+  }
+
+  function navigateToCart() {
+    navigate("/cart");
   }
 
   return (
@@ -21,7 +29,7 @@ function DrawHeader() {
       <div className="header">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" onClick={navigateToHome}>
               AMOMENTO
             </a>
             <button
@@ -50,7 +58,7 @@ function DrawHeader() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="#" onClick={navigateToCart}>
                     Cart({cart})
                   </a>
                 </li>

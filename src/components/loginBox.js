@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "@popperjs/core";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/loginBox.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function DrawLoginBox() {
   const navigate = useNavigate();
+
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
 
   function navigateToFindId() {
     navigate("/find_id");
@@ -20,6 +24,24 @@ function DrawLoginBox() {
   function navigateToSignUp() {
     navigate("/join");
   }
+
+  async function getLoginData() {
+    try {
+      const response = await axios.get(
+        "http://3.39.11.11:8080/member/api/login",
+        {
+          params: {
+            member_id: id,
+            password: password,
+          },
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="loginBox">
       <div className="form-floating mb-3">
@@ -28,6 +50,8 @@ function DrawLoginBox() {
           className="form-control"
           id="floatingInput"
           placeholder="ID"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
         ></input>
         <label for="floatingInput">ID</label>
       </div>
@@ -37,11 +61,17 @@ function DrawLoginBox() {
           className="form-control"
           id="floatingPassword"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         ></input>
         <label for="floatingPassword">Password</label>
       </div>
       <div className="signInOrUp">
-        <button type="button" className="btn btn-outline-secondary">
+        <button
+          type="button"
+          className="btn btn-outline-secondary"
+          onClick={getLoginData}
+        >
           LOGIN
         </button>
         <button
