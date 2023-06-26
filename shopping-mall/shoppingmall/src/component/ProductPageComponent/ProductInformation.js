@@ -3,8 +3,19 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/ProductPage.css';
+import { useState } from 'react';
 
 const ProductInformation = () => {
+    const [color, setColor] = useState('');
+
+    const changeColor = (e) => {
+        if (color === e.target.value) {
+            setColor('');
+        } else {
+            setColor(e.target.value);
+        }
+    };
+
     return (
         <div id="product-information">
             <div className="information-container">
@@ -46,11 +57,20 @@ const ProductInformation = () => {
                         <div className="product-price">289,000</div>
                     </div>
                     <div className="color-option">
-                        <label>Color</label>
+                        <div className="color-label">
+                            <label>Color</label>
+                            <label className="selected-color">{color}</label>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            value={'GRAY'}
+                            onClick={changeColor}
+                        ></button>
                     </div>
                     <div className="size-option">
                         <label className="size-label">Size</label>
-                        <button className="size-button">BLACK</button>
+                        <button className="size-button">One Size</button>
                     </div>
                     <div className="add-cart">
                         <button className="add-to-cart-button">
@@ -136,14 +156,120 @@ const ProductInformation = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="size-guide"></div>
-                    <div className="fabric-care"></div>
-                    <div className="shipping-return"></div>
-    <div className="customer-service"></div>*/}
+                    <div className="information-empty-space"></div>
                 </div>
-                <div className="product-image">상준</div>
-                <div className="empty-space">상준</div>
+                <div className="product-image">
+                    <div className="total">
+                        <div
+                            id="carouselExampleDark"
+                            class="carousel carousel-dark slide"
+                        >
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"
+                                ></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div
+                                    class="carousel-item active"
+                                    data-bs-interval="10000"
+                                >
+                                    <div className="image-container">
+                                        <img
+                                            src="//amomento.co/web/product/small/202306/c7806ee4a4ea5a556394903a379ab56a.jpg"
+                                            class="d-block w-100"
+                                            alt="..."
+                                        ></img>
+                                    </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>
+                                            Some representative placeholder
+                                            content for the first slide.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="carousel-item"
+                                    data-bs-interval="2000"
+                                >
+                                    <div className="image-container">
+                                        <img
+                                            src="//amomento.co/web/product/extra/small/202306/3fd5db95ee170c8179ff0ac839e4ff7f.jpg"
+                                            class="d-block w-100"
+                                            alt="..."
+                                        ></img>
+                                    </div>
+
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Second slide label</h5>
+                                        <p>
+                                            Some representative placeholder
+                                            content for the second slide.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src="..."
+                                        class="d-block w-100"
+                                        alt="..."
+                                    ></img>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Third slide label</h5>
+                                        <p>
+                                            Some representative placeholder
+                                            content for the third slide.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselExampleDark"
+                                data-bs-slide="prev"
+                            >
+                                <span
+                                    class="carousel-control-prev-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselExampleDark"
+                                data-bs-slide="next"
+                            >
+                                <span
+                                    class="carousel-control-next-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="right-empty-space"></div>
             </div>
         </div>
     );
