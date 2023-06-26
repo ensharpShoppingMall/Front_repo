@@ -1,0 +1,84 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.cart-container {
+    display: flex;
+    font-family: 'HNC', 'SpoqaHanSans', Noto Sans KR, sans-serif;
+    font-style: condensed;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    background: #fff;
+    color: #111;
+    text-transform: uppercase;
+    word-break: keep-all;
+}
+/*AddedProduct*/
+
+.product-part {
+    width: 60vw;
+    border: 1px solid #000;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+.each-product-container {
+    display: flex;
+}
+.image {
+    width: 21%;
+    border-right: 1px solid #111;
+}
+.information {
+    width: 79%;
+    padding: 10px 10px 10px 10px;
+}
+.information-top {
+    display: flex;
+    justify-content: space-between;
+}
+.information-top p {
+    margin: 0;
+    padding: 0;
+}
+.information-middle {
+    margin-bottom: 120px;
+}
+.information-middle ul {
+    list-style: none;
+}
+.information-middle li {
+    float: left;
+    margin-left: 10px;
+}
+.information-middle button {
+    background-color: transparent;
+}
+.information-buttom {
+    text-align: end;
+}
+.information-buttom button {
+    background-color: transparent;
+}
+
+/*CartOption*/
+.option-part {
+    width: 40vw;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+}
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.naver-pay {
+    padding: 0;
+    margin: 0;
+}

@@ -4,9 +4,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/ProductPage.css';
 import { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const ProductInformation = () => {
+    const navigate = useNavigate();
     const [color, setColor] = useState('');
+
+    function navigateToCart() {
+        navigate('/cart');
+    }
 
     const changeColor = (e) => {
         if (color === e.target.value) {
@@ -73,7 +79,10 @@ const ProductInformation = () => {
                         <button className="size-button">One Size</button>
                     </div>
                     <div className="add-cart">
-                        <button className="add-to-cart-button">
+                        <button
+                            className="add-to-cart-button"
+                            onClick={navigateToCart}
+                        >
                             ADD TO CART
                         </button>
                     </div>
